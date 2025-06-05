@@ -4,11 +4,10 @@ from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 
-# Load your dataset
-df = pd.read_csv("heart.csv")  # Modify as needed
+df = pd.read_csv("heart.csv") 
 
 # Preprocess
-X = df.drop(columns=['target'])  # Replace with actual target column name
+X = df.drop(columns=['target']) 
 y = df['target']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
